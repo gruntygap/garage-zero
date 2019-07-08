@@ -26,6 +26,5 @@ def garage():
                 relay.initialize()
                 relay.trigger()
                 return each + ", you are authorized, garage interacting..."
-            else:
-                return abort(404)
+        return abort(404)
 
