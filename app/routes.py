@@ -2,9 +2,9 @@ from flask import Blueprint, request, abort
 import config
 
 if config.prod:
-    import relay
+    import app.relay as relay
 else:
-    import relay_faker as relay
+    import app.relay_faker as relay
 
 routes = Blueprint('routes', __name__)
 
