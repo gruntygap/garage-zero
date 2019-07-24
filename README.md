@@ -10,3 +10,6 @@ and the command to run the env is:
 
 ## Running the server
 ```gunicorn run:app --bind 0.0.0.0:80```
+
+V. helpful
+https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
