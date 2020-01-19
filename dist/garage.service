@@ -1,0 +1,14 @@
+[Unit]
+Description=garage-zero repository, gunicorn, flask, etc.
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/home/pi/garage-zero
+Environment="PATH=/home/pi/env/garage-zero/bin"
+ExecStart=/home/pi/env/garage-zero/bin/gunicorn -w 2 --bind 0.0.0.0:80 --access-logfile=../log/access.log --error-logfile ../log/err.log run:app
+
+[Install]
+WantedBy=multi-user.target
+Alias=garage.service
